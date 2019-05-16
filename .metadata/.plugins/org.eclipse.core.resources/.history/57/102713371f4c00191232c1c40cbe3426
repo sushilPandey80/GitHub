@@ -1,0 +1,26 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class QickAcademy {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\Dell User\\Desktop\\Udmey\\lib\\chromedriver\\chromedriver.exe");
+		//*[@id="tablist1-tab1"]/following-sibling::li[3]
+		//*[@id="tablist1-tab1"]
+		//WebDriver driver= new FirefoxDriver();
+
+		WebDriver driver= new ChromeDriver();
+		//WebDriver driver= new InternetExplorerDriver();
+		driver.get("http://www.qaclickacademy.com/interview.php");
+		
+		driver.findElement(By.xpath("//*[text()=' Selenium ']")).click();
+	
+		//driver.findElement(By.xpath("//*[@id=\"tablist1-tab1\"]/following-sibling::li[1]")).click();
+		//driver.findElement(By.xpath("//*[@id=\"tablist1-tab1\"]/following-sibling::li[2]")).click();
+		//driver.findElement(By.xpath("//*[@id=\"tablist1-tab1\"]/following-sibling::li[3]")).click();
+		//driver.findElement(By.xpath("//*[@id=\"tablist1-tab1\"]/parent::ul")).click();
+		
+	}
+
+}

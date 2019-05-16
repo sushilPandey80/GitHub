@@ -1,0 +1,56 @@
+package Test;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class day2 {
+	@Test
+	public void Demo5() throws IOException  
+	{
+		Properties Pro=new 	Properties(); 
+		FileInputStream fis=new FileInputStream("C:\\Users\\Dell User\\Desktop\\Udmey\\TestNG\\src\\Test\\datadriver.properties");
+Pro.load(fis);
+System.out.println(Pro.getProperty("username"));
+
+
+		System.out.println("before suite");
+	}
+	@AfterSuite
+	public void Demo4()
+	{
+		System.out.println("after suite");
+	}
+	@Test(dependsOnMethods={"temo3","demo6"})
+	public void Demo2()
+	{
+		System.out.println("2nd classtest2");
+	}
+
+	@Test
+	public void temo3()
+	{
+		System.out.println("3nd depend calssclasstest3");
+	}
+	@Test
+	public void demo6()
+	{
+		System.out.println("6th  depend demo 2nd class");
+	}
+	@Test(enabled=false)
+	public void demo7()
+	{
+		System.out.println("enable  depend demo 2nd class");
+	}
+	@BeforeTest
+	public void prereq()
+	{
+		System.out.println("PrereqTestCase");
+	}
+}

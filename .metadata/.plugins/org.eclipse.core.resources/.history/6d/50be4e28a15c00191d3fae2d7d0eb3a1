@@ -1,0 +1,28 @@
+package Test;
+
+import org.testng.annotations.Test;
+
+import com.beust.jcommander.Parameters;
+
+public class day1 {
+	
+	@org.testng.annotations.AfterTest
+	public void AfterTest()
+	{
+		System.out.println("execute after test");
+	}
+	@org.testng.annotations.Parameters({"url"})	
+@Test
+	public void Demo(String urlstring)
+	{
+		System.out.println(urlstring);
+	}
+
+@Test
+public void Demo2Test()
+{
+	System.out.println("hello2");
+}
+}
+
+

@@ -1,0 +1,20 @@
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Scope {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\Dell User\\Desktop\\Udmey\\lib\\chromedriver\\chromedriver.exe");
+
+
+		//WebDriver driver= new FirefoxDriver();
+
+		WebDriver driver= new ChromeDriver();
+		//WebDriver driver= new InternetExplorerDriver();
+		driver.get("http://echoecho.com/htmlforms10.htm");
+		Thread.sleep(6000L);
+
+	}
+
+}
